@@ -1,12 +1,12 @@
 # Nowcasting US Private Demand
 
-This repository contains the implementation and documentation of a mixed-frequency Dynamic Factor Model developed to nowcast US Private Demand.
+This repository contains the implementation of a mixed-frequency Dynamic Factor Model (DFM) for real-time nowcasting of US Private Demand.
 
 ## Overview
 
-The project develops a state-space Dynamic Factor Model estimated via Maximum Likelihood and the Kalman Filter to produce real-time nowcasts of US Private Demand.
+The project develops a state-space Dynamic Factor Model estimated via Maximum Likelihood and the Kalman Filter to track US Private Demand in real time using mixed-frequency macroeconomic data.
 
-A central contribution of the project is the systematic evaluation of alternative macroeconomic indicators through an iterative variable selection procedure, identifying the specification that maximizes forecasting performance while preserving economic interpretability.
+A central objective is to identify the optimal information set through a systematic variable selection procedure, evaluating both hard and soft indicators according to their contribution to forecasting performance.
 
 ## Research Topics
 
@@ -15,6 +15,7 @@ A central contribution of the project is the systematic evaluation of alternativ
 - Mixed-Frequency Data
 - State-Space Models
 - Kalman Filtering
+- Hard and Soft Indicators
 - Variable Selection
 - Forecast Evaluation
 
@@ -25,17 +26,23 @@ A central contribution of the project is the systematic evaluation of alternativ
 - Kalman Filter
 - Maximum Likelihood Estimation
 - Mixed-Frequency Aggregation
-- Real-Time Nowcasting
+- Sequential Variable Selection
 
-## Repository Contents
+## Indicators
 
-- MATLAB implementation of the Dynamic Factor Model
-- Estimation routines
-- Model estimation log documenting all specifications and model selection experiments
+The model evaluates a wide set of macroeconomic indicators, including:
 
-## Current Best Specification
+- Consumption
+- Residential and Non-Residential Investment
+- Capital Goods Shipments
+- Building Permits
+- Industrial Production
+- Consumer Sentiment (soft indicator)
+- Alternative real-time macroeconomic indicators
 
-The final model achieves a correlation of **0.733** between the estimated common factor and US Private Demand after an iterative variable selection procedure that evaluates alternative indicator sets and model specifications.
+## Current Best Model
+
+The preferred specification is selected through an iterative model selection procedure and achieves a correlation of **0.733** between the estimated common factor and US Private Demand.
 
 ## Software
 
